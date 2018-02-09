@@ -1,3 +1,13 @@
-body {
-    margin: 0px;
+// Mobile device body width
+@media (max-width: 700px) {
+    body {
+        width: 100%;
+    }
+}
+
+@media (min-width: 701px) {
+    body {
+        width: 1080px;
+        margin: 0px;
+    }
 }

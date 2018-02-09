@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        {% block head %}
+            {% include 'components/head' %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block nav %}
+            {% include 'components/nav' %}
+        {% endblock %}
+
+        {% block content %}
+            {# Page content will go here #}
+        {% endblock %}
+
+        {% block footer %}
+            {% include 'components/footer' %}
+        {% endblock %}
+    </body>
+</html>
