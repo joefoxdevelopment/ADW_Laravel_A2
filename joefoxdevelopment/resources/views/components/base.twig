@@ -6,17 +6,13 @@
         {% endblock %}
     </head>
     <body>
-        {% block nav %}
-            {% include 'components/nav' %}
-        {% endblock %}
+        <div id="nav" class="nav"></div>
 
         {% block content %}
             {# Page content will go here #}
         {% endblock %}
 
-        {% block footer %}
-            {% include 'components/footer' %}
-        {% endblock %}
+        <div id="footer" class="footer"></div>
     </body>
     {% include 'components/scripts' %}
 </html>

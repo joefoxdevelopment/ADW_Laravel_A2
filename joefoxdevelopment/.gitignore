@@ -4,8 +4,8 @@
 /.vscode
 /node_modules
 /public/hot
-/public/css/app.css
-/public/js/app.js
+/public/css/
+/public/js/
 /public/storage
 /storage/*.key
 /vendor
