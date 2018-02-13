@@ -1,13 +1,13 @@
 // Mobile device body width
 @media (max-width: 700px) {
-    body {
+    .content {
         width: 100%;
     }
 }
 
 @media (min-width: 701px) {
-    body {
+    .content {
         width: 1080px;
-        margin: 0px;
+        margin: auto;
     }
 }

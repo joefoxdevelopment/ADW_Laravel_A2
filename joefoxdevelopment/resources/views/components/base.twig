@@ -8,9 +8,11 @@
     <body>
         <div id="nav" class="nav"></div>
 
-        {% block content %}
-            {# Page content will go here #}
-        {% endblock %}
+        <div class="content">
+            {% block content %}
+                {# Page content will go here #}
+            {% endblock %}
+        </div>
 
         <div id="footer" class="footer"></div>
     </body>

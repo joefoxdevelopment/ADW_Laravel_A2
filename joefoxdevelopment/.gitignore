@@ -3,12 +3,13 @@
 /.vagrant
 /.vscode
 /node_modules
+/public/css/*.css
 /public/hot
-/public/css/
-/public/js/
+/public/js/*.js
 /public/storage
 /storage/*.key
 /vendor
+composer.lock
 Homestead.json
 Homestead.yaml
 npm-debug.log

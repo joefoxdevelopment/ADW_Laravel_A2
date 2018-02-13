@@ -9,7 +9,7 @@ export default class Footer extends Component {
 
     render() {
         return (
-            <p>Joe Fox Development {this.state.date.getFullYear()}</p>
+            <h5>&copy; Joe Fox Development {this.state.date.getFullYear()}</h5>
         );
     }
 }
