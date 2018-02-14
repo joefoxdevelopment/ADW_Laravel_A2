@@ -1,0 +1,21 @@
+{% if errors.any() %}
+<div class="login-errors">
+    {% for error in errors.all() %}
+        <li>{{ error }}</li>
+    {% endfor %}
+</div>
+<br>
+{% endif %}
+
+<div class="login-form">
+    <form method="post" action="{{ route('login') }}">
+        {{ csrf_field() }}
+        Email:<br>
+        <input type="text" name="email">
+        <br>
+        Password:<br>
+        <input type="password" name="password">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
