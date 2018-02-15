@@ -3,9 +3,7 @@
 /.vagrant
 /.vscode
 /node_modules
-/public/css/*.css
 /public/hot
-/public/js/*.js
 /public/storage
 /storage/*.key
 /vendor
