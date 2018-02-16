@@ -12,6 +12,10 @@
 */
 
 Route::get('/', 'UserController@index')->name('index');
+Route::get('/about', 'UserController@about')->name('about');
+Route::get('/projects', 'UserController@projects')->name('projects');
+Route::get('/blog', 'UserController@blog')->name('blog');
+Route::get('/contact', 'UserController@contact')->name('contact');
 
 Auth::routes();
 

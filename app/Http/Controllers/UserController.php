@@ -9,4 +9,20 @@ class UserController extends Controller
 	public function index() {
 		return view('pages/user/index', []);
 	}
+
+    public function about() {
+        return view('pages/user/index', []);
+    }
+
+    public function blog() {
+        return view('pages/user/index', []);
+    }
+
+    public function projects() {
+        return view('pages/user/index', []);
+    }
+
+    public function contact() {
+        return view('pages/user/index', []);
+    }
 }
