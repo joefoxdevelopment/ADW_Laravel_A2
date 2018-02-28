@@ -19,4 +19,4 @@ Route::get('/contact', 'UserController@contact')->name('contact');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/manage', 'ManagementConsoleController@index')->name('management-index');
