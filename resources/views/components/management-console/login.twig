@@ -1,0 +1,29 @@
+{% if errors.any() %}
+<div>
+    {% for error in errors.all() %}
+        <li>{{ error }}</li>
+    {% endfor %}
+</div>
+<br>
+{% endif %}
+
+<div class="userauth">
+    <form method="post" action="{{ route('login') }}">
+        {{ csrf_field() }}
+        Email:<br>
+        <input type="text" name="email">
+        <br>
+        Password:<br>
+        <input type="password" name="password">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <form method="post" action="/reset-pass-route">
+        {{ csrf_field() }}
+        Forgotten Password, enter your email below:<br>
+        <input type="text" name="email">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
