@@ -1,2 +1,5 @@
 // Import default stylesheet
-@import "app.scss"
+@import "app";
+
+// Import management console elements
+@import "components/login";
