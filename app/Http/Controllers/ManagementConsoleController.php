@@ -23,6 +23,6 @@ class ManagementConsoleController extends Controller
      */
     public function index()
     {
-        return view('pages/managment-console/index');
+        return view('pages/management-console/index');
     }
 }
