@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 219);
+/******/ 	return __webpack_require__(__webpack_require__.s = 222);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -53811,25 +53811,23 @@ document.querySelector('.js-nav-hamburger').onclick = function (e) {
 };
 
 /***/ }),
-/* 219 */
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__(223);
+
+
+/***/ }),
+/* 223 */
+/***/ (function(module, exports, __webpack_require__) {
+
+//Extend the default js file
 __webpack_require__(90);
-__webpack_require__(220);
-module.exports = __webpack_require__(221);
 
-
-/***/ }),
-/* 220 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 221 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+//Add the stuff needed for the management console only
 
 /***/ })
 /******/ ]);
