@@ -124,8 +124,10 @@
 }
 
 .login-container {
-  width: calc(100% - 20px);
+  max-width: 400px;
+  width: 20%;
   z-index: 20;
   border: 1px solid black;
+  vertical-align: middle;
 }
 

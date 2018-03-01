@@ -10246,7 +10246,6 @@ module.exports = getHostComponentFromComposite;
 /* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes React and other helpers. It's a great starting point while
@@ -10266,6 +10265,7 @@ __webpack_require__(217);
  * Other JavaScript
  */
 
+//Events should be added after react components are added
 __webpack_require__(218);
 
 /***/ }),

@@ -10243,32 +10243,7 @@ function getHostComponentFromComposite(inst) {
 module.exports = getHostComponentFromComposite;
 
 /***/ }),
-/* 90 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes React and other helpers. It's a great starting point while
- * building robust, powerful web applications using React + Laravel.
- */
-
-__webpack_require__(91);
-
-/**
- * React Components
- */
-
-__webpack_require__(116);
-__webpack_require__(217);
-
-/**
- * Other JavaScript
- */
-
-__webpack_require__(218);
-
-/***/ }),
+/* 90 */,
 /* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -53661,143 +53636,7 @@ var ReactDOMInvalidARIAHook = {
 module.exports = ReactDOMInvalidARIAHook;
 
 /***/ }),
-/* 217 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-var Nav = function (_Component) {
-    _inherits(Nav, _Component);
-
-    function Nav() {
-        _classCallCheck(this, Nav);
-
-        return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).apply(this, arguments));
-    }
-
-    _createClass(Nav, [{
-        key: 'render',
-        value: function render() {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'nav__container' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'nav__desktop' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        { className: 'nav__title', href: '/' },
-                        'Joe Fox Development'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'ul',
-                        { className: 'nav__links' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'li',
-                            { className: 'nav__links__link' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'a',
-                                { href: '/about' },
-                                'About'
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'li',
-                            { className: 'nav__links__link' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'a',
-                                { href: '/projects' },
-                                'Projects'
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'li',
-                            { className: 'nav__links__link' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'a',
-                                { href: '/blog' },
-                                'Blog'
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'li',
-                            { className: 'nav__links__link' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'a',
-                                { href: '/contact' },
-                                'Contact'
-                            )
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'nav__mobile' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        { className: 'nav__title', href: '/' },
-                        'Joe Fox Development'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'span',
-                        { className: 'js-nav-hamburger nav__hamburger' },
-                        'Nav Icon Here'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'js-mobile-menu nav__mobile__links' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'a',
-                            { className: 'js-nav-link', href: '/about' },
-                            'About'
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'a',
-                            { className: 'js-nav-link', href: '/projects' },
-                            'Projects'
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'a',
-                            { className: 'js-nav-link', href: '/blog' },
-                            'Blog'
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'a',
-                            { className: 'js-nav-link', href: '/contact' },
-                            'Contact'
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Nav;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Nav);
-
-
-if (document.getElementById('nav')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Nav, null), document.getElementById('nav'));
-}
-
-/***/ }),
+/* 217 */,
 /* 218 */
 /***/ (function(module, exports) {
 
@@ -53824,10 +53663,127 @@ module.exports = __webpack_require__(223);
 /* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
-//Extend the default js file
-__webpack_require__(90);
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes React and other helpers. It's a great starting point while
+ * building robust, powerful web applications using React + Laravel.
+ */
 
-//Add the stuff needed for the management console only
+__webpack_require__(91);
+
+/**
+ * React Components
+ */
+
+__webpack_require__(116);
+__webpack_require__(229);
+
+/**
+ * Other JavaScript
+ */
+
+//Events should be added after react components are added
+__webpack_require__(218);
+
+/***/ }),
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var ManagementNav = function (_Component) {
+    _inherits(ManagementNav, _Component);
+
+    function ManagementNav() {
+        _classCallCheck(this, ManagementNav);
+
+        return _possibleConstructorReturn(this, (ManagementNav.__proto__ || Object.getPrototypeOf(ManagementNav)).apply(this, arguments));
+    }
+
+    _createClass(ManagementNav, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'nav__container' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'nav__desktop' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'a',
+                        { className: 'nav__title', href: '/' },
+                        'Joe Fox Development'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'ul',
+                        { className: 'nav__links' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'li',
+                            { className: 'nav__links__link' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'a',
+                                { href: '/logout' },
+                                'Logout'
+                            )
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'nav__mobile' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'a',
+                        { className: 'nav__title', href: '/' },
+                        'Joe Fox Development'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'span',
+                        { className: 'js-nav-hamburger nav__hamburger' },
+                        'Nav Icon Here'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'js-mobile-menu nav__mobile__links' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'a',
+                            { className: 'js-nav-link', href: '/logout' },
+                            'Logout'
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return ManagementNav;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (ManagementNav);
+
+
+if (document.getElementById('management-nav')) {
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ManagementNav, null), document.getElementById('management-nav'));
+}
 
 /***/ })
 /******/ ]);
