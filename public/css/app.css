@@ -6,7 +6,8 @@
 
 @media (min-width: 701px) {
   .content {
-    width: 1080px;
+    width: 100%;
+    max-width: 1080px;
     margin: auto;
   }
 }
@@ -120,5 +121,11 @@
 .footer {
   z-index: 0;
   margin: 10px;
+}
+
+input[type=submit],
+button {
+  border: none;
+  text-decoration: none;
 }
 
