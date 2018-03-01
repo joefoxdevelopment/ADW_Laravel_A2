@@ -118,16 +118,81 @@
 }
 
 .footer {
-  display: inline-block;
   z-index: 0;
   margin: 10px;
 }
 
 .login-container {
-  max-width: 400px;
+  width: 400px;
+  margin: auto;
+  padding: 10px;
+  line-height: 50px;
+  -webkit-box-shadow: 0px 0px 5px;
+          box-shadow: 0px 0px 5px;
+  display: grid;
+}
+
+.login-container .errors {
+  line-height: normal;
+}
+
+.login-container label {
+  float: left;
+  width: 25%;
+}
+
+.login-container input {
+  float: right;
+  width: 70%;
+  height: 30px;
+  padding-top: 10px;
+}
+
+.login-container input[type=text],
+.login-container input[type=password] {
+  border: none;
+  border-bottom: 1px solid grey;
+  padding-left: 10px;
+}
+
+.login-container input[type=text]:focus,
+.login-container input[type=password]:focus {
+  border-bottom: 2px solid #4040ee;
+  background-color: #efefef;
+}
+
+.login-container input[type=submit] {
   width: 20%;
-  z-index: 20;
-  border: 1px solid black;
-  vertical-align: middle;
+  float: right;
+  padding: 0;
+  border-radius: 2px;
+  background-color: #4040ee;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    width: calc(100% - 20px);
+    max-width: 400px;
+  }
+
+  .login-container label,
+  .login-container input {
+    width: calc(100% - 20px);
+  }
+
+  .login-container input[type=text],
+  .login-container input[type=password] {
+    margin-bottom: 20px;
+  }
+
+  .login-container input[type=submit] {
+    margin-top: 10px;
+    width: 100%;
+    float: none;
+  }
 }
 
