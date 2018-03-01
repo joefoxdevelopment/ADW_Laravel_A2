@@ -2,27 +2,5 @@
 
 {% block content %}
     <h2>Write a new blog post</h2>
-
-    <form method="POST" id="blog-form">
-        <label for="title">Post Title: </label>
-        <input type="text" name="title">
-        <br />
-
-        <label for="content">Post content: </label>
-        <textarea name="content" form="blog-form"></textarea>
-        <br />
-
-        <div class="preview">Stick the preview in here</div>
-        <br />
-
-        <label for="preview-confirm">Confirm preview: </label>
-        <input type="checkbox" name="preview-confirm">
-        <br />
-
-
-        <label for="publish">Publish this blog post: </label>
-        <input type="checkbox" name="publish">
-        <br />
-        <input type="submit" value="Submit">
-    </form>
+    {% include "components/management-console/blog-editor" %}
 {% endblock %}
