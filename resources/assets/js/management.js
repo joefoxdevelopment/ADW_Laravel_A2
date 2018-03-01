@@ -12,7 +12,7 @@ require('./bootstrap');
 
 require('./components/Footer');
 require('./components/ManagementNav');
-
+require('./components/Blogpost');
 
 /**
  * Other JavaScript
@@ -20,3 +20,4 @@ require('./components/ManagementNav');
 
 //Events should be added after react components are added
  require('./events/nav');
+ require('./events/updatePreview');

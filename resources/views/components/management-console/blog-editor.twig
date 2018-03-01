@@ -8,18 +8,19 @@
             <label for="title">Post Title: </label>
         </div>
         <div class="manage-blog-item">
-            <input type="text" name="title">
+            <input id="blog-title" type="text" name="title">
         </div>
 
         <div class="manage-blog-item">
             <label for="content">Post content: </label>
         </div>
         <div class="manage-blog-item">
-            <textarea name="content" form="blog-form"></textarea>
+            <textarea id="blog-content" name="content" form="blog-form"></textarea>
         </div>
 
         <div class="manage-blog-item blog-fullwide">
-            <div class="preview">Stick the preview in here</div>
+            {# Blog posts and previews are react components #}
+            <div id="blogpost" class="preview"></div>
         </div>
 
         <div class="manage-blog-item">
