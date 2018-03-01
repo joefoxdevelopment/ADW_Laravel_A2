@@ -20,3 +20,7 @@ Route::get('/contact', 'UserController@contact')->name('contact');
 Auth::routes();
 
 Route::get('/manage', 'ManagementConsoleController@index')->name('management-index');
+
+Route::middleware(['auth'])->group(function() {
+	Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+});

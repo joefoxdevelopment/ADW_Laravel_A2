@@ -53732,7 +53732,7 @@ var ManagementNav = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
                         { className: 'nav__title', href: '/' },
-                        'Joe Fox Development'
+                        'Joe Fox Development - Management Console'
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'ul',
