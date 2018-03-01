@@ -1,5 +1,4 @@
-<div class="login-container">
-    {% if errors.any() %}
+{% if errors.any() %}
     <div class="errors">
         <p>Login errors:</p>
         <ul>
@@ -8,15 +7,24 @@
             {% endfor %}
         </ul>
     </div>
-    {% endif %}
-    <form method="post" action="{{ route('login') }}">
-        {{ csrf_field() }}
-        <label for="email">Email: </label>
-        <input type="text" name="email">
-        <br />
-        <label for="password">Password: </label>
-        <input type="password" name="password">
-        <br />
-        <input type="submit" value="Submit">
-    </form>
-</div>
+{% endif %}
+<form method="post" action="{{ route('login') }}">
+    {{ csrf_field() }}
+    <div class="login-container">
+        <div class="login-item">
+            <label for="email">Email: </label>
+        </div>
+        <div class="login-item">
+            <input type="text" name="email">
+        </div>
+        <div class="login-item">
+            <label for="password">Password: </label>
+        </div>
+        <div class="login-item">
+            <input type="password" name="password">
+        </div>
+        <div class="login-item login-submit">
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+</form>

@@ -1,6 +1,7 @@
-<div class="blog-editor">
-    <form method="POST" id="blog-form">
-        {{ csrf_field() }}
+
+<form method="POST" id="blog-form">
+    {{ csrf_field() }}
+    <div class="blog-editor">
         <label for="title">Post Title: </label>
         <input type="text" name="title">
         <br />
@@ -21,5 +22,5 @@
         <br />
 
         <input type="submit" value="Submit">
-    </form>
-</div>
+    </div>
+</form>
