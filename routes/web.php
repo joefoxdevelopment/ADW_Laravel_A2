@@ -21,6 +21,10 @@ Auth::routes();
 
 Route::get('/manage', 'ManagementConsoleController@index')->name('management-index');
 
+
+Route::get('/manage/blog','BlogManagementController@index')->name('blog-management-index');
+Route::get('/manage/blog/new','BlogManagementController@newBlogPost')->name('new-blog-post');
+
 Route::middleware(['auth'])->group(function() {
 	Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 });

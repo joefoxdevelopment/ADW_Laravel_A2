@@ -9,16 +9,14 @@
         </ul>
     </div>
     {% endif %}
-    <div class="userauth">
-        <form method="post" action="{{ route('login') }}">
-            {{ csrf_field() }}
-            <label for="email">Email: </label>
-            <input type="text" name="email">
-            <br />
-            <label for="password">Password: </label>
-            <input type="password" name="password">
-            <br />
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+    <form method="post" action="{{ route('login') }}">
+        {{ csrf_field() }}
+        <label for="email">Email: </label>
+        <input type="text" name="email">
+        <br />
+        <label for="password">Password: </label>
+        <input type="password" name="password">
+        <br />
+        <input type="submit" value="Submit">
+    </form>
 </div>
