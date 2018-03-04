@@ -24,6 +24,7 @@ class CreateBlogPostsTable extends Migration
             $table->string('contents');
             $table->boolean('verified');
             $table->boolean('published');
+            $table->timestamp('published_at')->useCurrent();
             $table->timestamps();
         });
     }

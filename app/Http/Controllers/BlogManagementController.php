@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\BlogPost;
+use App\Http\Requests\SaveBlogPost;
 
 class BlogManagementController extends Controller
 {
@@ -31,8 +32,17 @@ class BlogManagementController extends Controller
         return view('pages/management-console/blog/new');
     }
 
-    public function addNewBlogPost(Request $request)
+    public function addNewBlogPost(SaveBlogPost $request)
     {
+        $post = new BlogPost();
+
+        $post->user_id   = \Auth::user()->id;
+        $post->title     = $request->title;
+        $post->contents  = $request->content;
+        $post->verified  = isset($request->previewconfirm);
+        $post->published = isset($request->publish);
+        $post->save();
+
         return view('pages/management-console/blog/index');
     }
 }
