@@ -7,6 +7,7 @@ export default class Blogpost extends Component {
         this.state = {
             title: "Example blogpost title",
             content: "Example blogpost content",
+            publishTime: new Date(),
         };
     }
 
@@ -14,6 +15,7 @@ export default class Blogpost extends Component {
         this.setState({
             title: title,
         });
+        this.updatePublishTime();
     }
 
     updateContent(content) {
@@ -22,11 +24,25 @@ export default class Blogpost extends Component {
         });
     }
 
+    updatePublishTime() {
+        this.setState({
+            publishTime: new Date(),
+        });
+    }
+
+    setBlogPost(title, date, content) {
+        this.setState({
+            title: title,
+            content: content,
+            publishTime: new Date(date),
+        });
+    }
+
     render() {
         return (
             <div className="blogpost-entry">
                 <h1>{ this.state.title }</h1>
-                <span className="publishDate">Publish date</span>
+                <span className="publishDate">{ this.state.publishTime.toDateString() }</span>
                 <div className="blogpost-contents" dangerouslySetInnerHTML={{__html: this.state.content}} />
             </div>
         );
