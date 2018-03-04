@@ -30,4 +30,9 @@ class BlogManagementController extends Controller
     {
         return view('pages/management-console/blog/new');
     }
+
+    public function addNewBlogPost(Request $request)
+    {
+        return view('pages/management-console/blog/index');
+    }
 }
