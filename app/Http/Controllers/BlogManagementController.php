@@ -24,7 +24,12 @@ class BlogManagementController extends Controller
      */
     public function index()
     {
-        return view('pages/management-console/blog/index');
+        return view(
+            'pages/management-console/blog/index',
+            [
+                'posts' => $this->listAllBlogPosts();
+            ]
+        );
     }
 
     public function newBlogPost()
@@ -44,5 +49,10 @@ class BlogManagementController extends Controller
         $post->save();
 
         return view('pages/management-console/blog/index');
+    }
+
+    private function listAllBlogPosts(): array
+    {
+        return [];
     }
 }
