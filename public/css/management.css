@@ -154,6 +154,11 @@ button {
           box-shadow: 0px 0px 5px;
   text-decoration: none;
   color: inherit;
+  -webkit-transition: box-shadow 0.5s, font-weight 0.5s;
+  -webkit-transition: font-weight 0.5s, -webkit-box-shadow 0.5s;
+  transition: font-weight 0.5s, -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s, font-weight 0.5s;
+  transition: box-shadow 0.5s, font-weight 0.5s, -webkit-box-shadow 0.5s;
 }
 
 .pagination-container .pagination-list li a:hover {
@@ -165,32 +170,6 @@ button {
 .pagination-container .pagination-list li.current {
   border-color: #4040ee !important;
   color: #4040ee !important;
-}
-
-.login-container {
-  width: calc(100% - 20px);
-  display: grid;
-  grid-template-columns: 25% 75%;
-  grid-template-rows: 50px 50px 50px;
-  grid-gap: 10px;
-  margin: 10px;
-  -webkit-box-shadow: 0px 0px 5px;
-          box-shadow: 0px 0px 5px;
-}
-
-.login-container input {
-  width: calc(100% - 30px);
-}
-
-.login-container input[type=text],
-.login-container input[type=password] {
-  border: none;
-  border-bottom: 1px solid #dfdfdf;
-}
-
-.login-container .login-submit {
-  grid-column-start: 1;
-  grid-column-end: 3;
 }
 
 .blog-editor {
@@ -240,5 +219,114 @@ button {
 
 .blog-editor .blog-fullwide .preview {
   width: calc(100% - 10px);
+}
+
+.manage-list-container {
+  width: calc(100%-20px);
+  display: block;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 5px;
+          box-shadow: 0 0 5px;
+}
+
+.new-post-button {
+  text-align: center;
+  width: calc(100% - 28px);
+  display: block;
+  border: 1px solid #dfdfdf;
+  padding: 7px 13px;
+  -webkit-box-shadow: 0px 0px 5px;
+          box-shadow: 0px 0px 5px;
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: box-shadow 0.5s, font-weight 0.5s;
+  -webkit-transition: font-weight 0.5s, -webkit-box-shadow 0.5s;
+  transition: font-weight 0.5s, -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s, font-weight 0.5s;
+  transition: box-shadow 0.5s, font-weight 0.5s, -webkit-box-shadow 0.5s;
+}
+
+.new-post-button:hover {
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0px 10px;
+          box-shadow: 0px 0px 10px;
+}
+
+.post-management-list {
+  text-align: center;
+  min-height: 50px;
+}
+
+.post-management-list .post-management-row {
+  width: 100%;
+}
+
+.post-management-list .post-management-row .post-row-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-management-list .post-management-row .post-row-list li {
+  display: inline-block;
+  width: calc(20% - 20px);
+}
+
+.post-management-list .post-management-row .post-row-list li a,
+.post-management-list .post-management-row .post-row-list li a:visited,
+.post-management-list .post-management-row .post-row-list li a:active {
+  display: block;
+  border: 1px solid #dfdfdf;
+  padding: 7px 13px;
+  -webkit-box-shadow: 0px 0px 5px;
+          box-shadow: 0px 0px 5px;
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: box-shadow 0.5s, font-weight 0.5s;
+  -webkit-transition: font-weight 0.5s, -webkit-box-shadow 0.5s;
+  transition: font-weight 0.5s, -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s, font-weight 0.5s;
+  transition: box-shadow 0.5s, font-weight 0.5s, -webkit-box-shadow 0.5s;
+}
+
+.post-management-list .post-management-row .post-row-list li.row-list-title {
+  width: calc(60% - 20px);
+}
+
+.post-management-list .post-management-row .post-row-list li.row-list-title a:hover {
+  font-weight: normal;
+  -webkit-box-shadow: 0px 0px 5px;
+          box-shadow: 0px 0px 5px;
+}
+
+.post-management-list .post-management-row .post-row-list li a:hover {
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0px 10px;
+          box-shadow: 0px 0px 10px;
+}
+
+.login-container {
+  width: calc(100% - 20px);
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 50px 50px 50px;
+  grid-gap: 10px;
+  margin: 10px;
+  -webkit-box-shadow: 0px 0px 5px;
+          box-shadow: 0px 0px 5px;
+}
+
+.login-container input {
+  width: calc(100% - 30px);
+}
+
+.login-container input[type=text],
+.login-container input[type=password] {
+  border: none;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.login-container .login-submit {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 

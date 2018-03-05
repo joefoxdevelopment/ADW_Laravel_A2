@@ -21,9 +21,12 @@ Auth::routes();
 
 Route::get('/manage', 'ManagementConsoleController@index')->name('management-index');
 
-
 Route::get('/manage/blog','BlogManagementController@index')->name('blog-management-index');
+Route::get('/manage/blog/delete/{id}', 'BlogManagementController@deleteBlogPost')->name('delete-blog-post');;
+Route::get('/manage/blog/edit/{id}', 'BlogManagementController@editBlogPost')->name('edit-blog-post');
 Route::get('/manage/blog/new','BlogManagementController@newBlogPost')->name('new-blog-post');
+
+Route::post('/manage/blog/edit/{id}', 'BlogManagementController@updateBlogPost')->name('edit-blog-post');
 Route::post('/manage/blog/new', 'BlogManagementController@addNewBlogPost')->name('add-new-blog-post');
 
 Route::middleware(['auth'])->group(function() {

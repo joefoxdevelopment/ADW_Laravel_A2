@@ -53911,6 +53911,9 @@ if (window.jfd.post && null !== titleInput && null !== contentInput) {
 	contentInput.addEventListener('keyup', function () {
 		window.jfd.post.updateContent(this.value);
 	});
+
+	window.jfd.post.updateTitle(titleInput.value);
+	window.jfd.post.updateContent(contentInput.value);
 }
 
 /***/ })

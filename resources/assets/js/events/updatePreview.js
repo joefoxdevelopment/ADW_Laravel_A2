@@ -12,4 +12,7 @@ if (window.jfd.post &&
 	contentInput.addEventListener('keyup', function() {
 		window.jfd.post.updateContent(this.value);
 	});
+
+	window.jfd.post.updateTitle(titleInput.value);
+	window.jfd.post.updateContent(contentInput.value);
 }

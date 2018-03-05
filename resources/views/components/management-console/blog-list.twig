@@ -3,7 +3,13 @@
     {% if loop.first %}
         <div class="post-management-list">
     {% endif %}
-    <p>{{ post.title }}</p>
+    <div class="post-management-row">
+        <ul class="post-row-list">
+            <li class="row-list-title"><a>{{ post.title }}</a></li>
+            <li><a href="{{ route('edit-blog-post', [post.blogpost_id]) }}">Edit</a></li>
+            <li><a href="{{ route('delete-blog-post', [post.blogpost_id]) }}">Delete</a></li>
+        </ul>
+    </div>
     {% if loop.last %}
         </div>
     {% endif %}

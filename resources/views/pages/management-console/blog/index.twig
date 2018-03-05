@@ -1,10 +1,13 @@
 {% extends "components/management-console/base" %}
 
 {% block content %}
-    <a href="{{ route('new-blog-post') }}">Write New Blog Post</a>
-    {% if posts is defined and not posts is empty %}
-        {% include "components/management-console/blog-list" %}
-    {% else %}
-        <h5>There are no blog posts to display</h5>
-    {% endif %}
+	<div class="manage-list-container">
+	    <a class="new-post-button" href="{{ route('new-blog-post') }}">Write New Blog Post</a>
+        <hr>
+	    {% if posts is defined and not posts is empty %}
+	        {% include "components/management-console/blog-list" %}
+	    {% else %}
+	        <h5>There are no blog posts to display</h5>
+	    {% endif %}
+	</div>
 {% endblock %}

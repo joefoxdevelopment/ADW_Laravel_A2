@@ -154,6 +154,11 @@ button {
           box-shadow: 0px 0px 5px;
   text-decoration: none;
   color: inherit;
+  -webkit-transition: box-shadow 0.5s, font-weight 0.5s;
+  -webkit-transition: font-weight 0.5s, -webkit-box-shadow 0.5s;
+  transition: font-weight 0.5s, -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s, font-weight 0.5s;
+  transition: box-shadow 0.5s, font-weight 0.5s, -webkit-box-shadow 0.5s;
 }
 
 .pagination-container .pagination-list li a:hover {

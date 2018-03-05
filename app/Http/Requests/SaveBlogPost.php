@@ -24,7 +24,7 @@ class SaveBlogPost extends FormRequest
     public function rules()
     {
         return [
-            'title'   => 'required|string|unique:blog_posts|max:255',
+            'title'   => 'required|string|max:255',
             'content' => 'required|string',
         ];
     }

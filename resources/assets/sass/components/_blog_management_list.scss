@@ -1,0 +1,68 @@
+.manage-list-container {
+    width: calc(100%-20px);
+    display: block;
+    padding: 10px;
+    box-shadow: 0 0 5px;
+}
+
+.new-post-button {
+    text-align: center;
+    width: calc(100% - 28px);
+    display: block;
+    border: 1px solid $color-mid-grey;
+    padding: 7px 13px;
+    box-shadow: 0px 0px 5px;
+    text-decoration: none;
+    color: inherit;
+    -webkit-transition: box-shadow 0.5s, font-weight 0.5s;
+    transition: box-shadow 0.5s, font-weight 0.5s;
+
+    &:hover {
+        font-weight: bold;
+        box-shadow: 0px 0px 10px;
+    }
+}
+
+.post-management-list {
+    text-align: center;
+    min-height: 50px;
+
+    .post-management-row {
+        width: 100%;
+
+        .post-row-list {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                width: calc(20% - 20px);
+
+                a, a:visited, a:active {
+                    display: block;
+                    border: 1px solid $color-mid-grey;
+                    padding: 7px 13px;
+                    box-shadow: 0px 0px 5px;
+                    text-decoration: none;
+                    color: inherit;
+                    -webkit-transition: box-shadow 0.5s, font-weight 0.5s;
+                    transition: box-shadow 0.5s, font-weight 0.5s;
+                }
+
+                &.row-list-title {
+                    width: calc(60% - 20px);
+
+                    a:hover {
+                        font-weight: normal;
+                        box-shadow: 0px 0px 5px;
+                    }
+                }
+
+                a:hover {
+                    font-weight: bold;
+                    box-shadow: 0px 0px 10px;
+                }
+            }
+        }
+    }
+}

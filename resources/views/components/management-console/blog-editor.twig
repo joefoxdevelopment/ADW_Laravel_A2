@@ -8,6 +8,9 @@
         </ul>
     </div>
 {% endif %}
+{% if not post is defined %}
+    {% set post = { 'title': '', 'contents': '', 'published': false} %}
+{% endif %}
 <form method="POST" id="blog-form">
     {{ csrf_field() }}
     <div class="blog-editor">
@@ -18,14 +21,14 @@
             <label for="title">Post Title: </label>
         </div>
         <div class="manage-blog-item">
-            <input id="blog-title" type="text" name="title">
+            <input id="blog-title" type="text" name="title" value="{{ post.title }}">
         </div>
 
         <div class="manage-blog-item">
             <label for="content">Post content: </label>
         </div>
         <div class="manage-blog-item">
-            <textarea id="blog-content" name="content" form="blog-form"></textarea>
+            <textarea id="blog-content" name="content" form="blog-form">{{ post.contents }}</textarea>
         </div>
 
         <div class="manage-blog-item blog-fullwide">
@@ -44,7 +47,7 @@
             <label for="publish">Publish this blog post: </label>
         </div>
         <div class="manage-blog-item">
-            <input type="checkbox" name="publish">
+            <input type="checkbox" name="publish" value="{{ post.published }}">
         </div>
 
         <div class="manage-blog-item blog-fullwide">

@@ -7,7 +7,7 @@ use App\Http\Requests\SaveBlogPost;
 
 class BlogManagementController extends Controller
 {
-    var $paginationLimit = 1;
+    var $paginationLimit = 20;
 
     /**
      * Create a new controller instance.
@@ -50,7 +50,34 @@ class BlogManagementController extends Controller
         $post->published = isset($request->publish);
         $post->save();
 
-        return redirect('manage/blog');
+        return redirect()->route('blog-management-index');
+    }
+
+    public function editBlogPost($id)
+    {
+        $post = BlogPost::find($id);
+
+        return view('pages/management-console/blog/edit', ['post' => $post]);
+    }
+
+    public function updateBlogPost(SaveBlogPost $request, $id)
+    {
+        $post = BlogPost::find($id);
+
+        $post->title     = $request->title;
+        $post->contents  = $request->content;
+        $post->verified  = isset($request->previewconfirm);
+        $post->published = isset($request->publish);
+        $post->save();
+
+        return redirect()->route('blog-management-index');
+    }
+
+    public function deleteBlogPost($id)
+    {
+        BlogPost::destroy($id);
+
+        return redirect()->route('blog-management-index');
     }
 
     private function listAllBlogPosts()
