@@ -15,7 +15,7 @@ class UserController extends Controller
     }
 
     public function blog() {
-        return view('pages/user/index', []);
+        return view('pages/user/blog', []);
     }
 
     public function projects() {
