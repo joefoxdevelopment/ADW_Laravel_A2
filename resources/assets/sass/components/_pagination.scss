@@ -1,0 +1,12 @@
+.pagination {
+	display: inline-block;
+	width: 100%;
+
+	a {
+		max-width: 33%;
+
+		.disabled {
+
+		}
+	}
+}

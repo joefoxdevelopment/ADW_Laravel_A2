@@ -1,0 +1,29 @@
+{% if paginator.hasPages() %}
+    <div class="pagination">
+        {% if paginator.onFirstPage() %}
+            <a class="disabled">First</a>
+        {% else %}
+            <a href="{{ paginator.url(1)}}">First</a>
+        {% endif %}
+
+        {% for element in elements %}
+            {% if element is iterable %}
+                {% for page, url in element %}
+                    {% if page == paginator.currentPage() %}
+                        <a class="item active" href="{{ url }}">{{ page }}</a>
+                    {% else %}
+                        <a class="item" href="{{ url }}">{{ page }}</a>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <a class="icon item disabled">{{ element }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if not paginator.hasMorePages() %}
+            <a class="disabled">Last</a>
+        {% else %}
+            <a href="{{ paginator.url(paginator.total()) }}">Last</a>
+        {% endif %}
+    </div>
+{% endif %}

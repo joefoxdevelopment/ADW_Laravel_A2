@@ -129,6 +129,15 @@ button {
   }
 }
 
+.pagination {
+  display: inline-block;
+  width: 100%;
+}
+
+.pagination a {
+  max-width: 33%;
+}
+
 .login-container {
   width: calc(100% - 20px);
   display: grid;
