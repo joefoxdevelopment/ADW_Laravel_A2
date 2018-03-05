@@ -1,29 +1,27 @@
 {% if paginator.hasPages() %}
-    <div class="pagination">
-        {% if paginator.onFirstPage() %}
-            <a class="disabled">First</a>
-        {% else %}
-            <a href="{{ paginator.url(1)}}">First</a>
-        {% endif %}
-
-        {% for element in elements %}
-            {% if element is iterable %}
-                {% for page, url in element %}
-                    {% if page == paginator.currentPage() %}
-                        <a class="item active" href="{{ url }}">{{ page }}</a>
-                    {% else %}
-                        <a class="item" href="{{ url }}">{{ page }}</a>
-                    {% endif %}
-                {% endfor %}
-            {% else %}
-                <a class="icon item disabled">{{ element }}</a>
+    <div class="pagination-container">
+        <ul class="pagination-list">
+            {% if not paginator.onFirstPage() %}
+                <li><a href="{{ paginator.url(1)}}">First</a></li>
             {% endif %}
-        {% endfor %}
 
-        {% if not paginator.hasMorePages() %}
-            <a class="disabled">Last</a>
-        {% else %}
-            <a href="{{ paginator.url(paginator.total()) }}">Last</a>
-        {% endif %}
+            {% for element in elements %}
+                {% if element is iterable %}
+                    {% for page, url in element %}
+                        {% if page == paginator.currentPage() %}
+                            <li class="current"><a class="item" href="{{ url }}">{{ page }}</a></li>
+                        {% else %}
+                            <li><a class="item" href="{{ url }}">{{ page }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <li><a class="icon item disabled">{{ element }}</a></li>
+                {% endif %}
+            {% endfor %}
+
+            {% if paginator.hasMorePages() %}
+                <li><a href="{{ paginator.url(paginator.total()) }}">Last</a></li>
+            {% endif %}
+        </ul>
     </div>
 {% endif %}

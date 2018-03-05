@@ -129,13 +129,33 @@ button {
   }
 }
 
-.pagination {
-  display: inline-block;
+.pagination-container {
+  text-align: center;
+  min-height: 50px;
+}
+
+.pagination-container .pagination-list {
+  list-style: none;
+  padding: 10px;
   width: 100%;
 }
 
-.pagination a {
-  max-width: 33%;
+.pagination-container .pagination-list li {
+  display: inline-block;
+}
+
+.pagination-container .pagination-list li a {
+  display: block;
+  border: 1px solid #dfdfdf;
+  padding: 7px 13px;
+  -webkit-box-shadow: 0px 0px 5px;
+          box-shadow: 0px 0px 5px;
+  text-decoration: none;
+}
+
+.pagination-container .pagination-list li.current {
+  border-color: #4040ee !important;
+  color: #4040ee !important;
 }
 
 .login-container {
