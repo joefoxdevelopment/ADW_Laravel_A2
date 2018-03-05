@@ -1,16 +1,13 @@
 // Common
 @import "common";
 
-//Fonts
+//Variables
 @import "components/fonts";
-
-//Colors
 @import "variables/colors";
 
-// Nav
-@import "components/nav";
-
-// Footer
-@import "components/footer";
-
+//Style for components
 @import "components/common_elements";
+@import "components/footer";
+@import "components/nav";
+@import "components/pagination";
+
