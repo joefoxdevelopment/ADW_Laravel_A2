@@ -1,0 +1,11 @@
+{{ posts.links() | raw }}
+{% for post in posts %}
+    {% if loop.first %}
+        <div class="post-management-list">
+    {% endif %}
+    <p>{{ post.title }}</p>
+    {% if loop.last %}
+        </div>
+    {% endif %}
+{% endfor %}
+{{ posts.links() | raw }}

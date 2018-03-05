@@ -7,6 +7,8 @@ use App\Http\Requests\SaveBlogPost;
 
 class BlogManagementController extends Controller
 {
+    var $paginationLimit = 1;
+
     /**
      * Create a new controller instance.
      *
@@ -27,7 +29,7 @@ class BlogManagementController extends Controller
         return view(
             'pages/management-console/blog/index',
             [
-                'posts' => $this->listAllBlogPosts();
+                'posts' => $this->listAllBlogPosts(),
             ]
         );
     }
@@ -48,11 +50,11 @@ class BlogManagementController extends Controller
         $post->published = isset($request->publish);
         $post->save();
 
-        return view('pages/management-console/blog/index');
+        return redirect('manage/blog');
     }
 
-    private function listAllBlogPosts(): array
+    private function listAllBlogPosts()
     {
-        return [];
+        return BlogPost::paginate($this->paginationLimit);
     }
 }
