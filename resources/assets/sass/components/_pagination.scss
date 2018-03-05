@@ -10,12 +10,18 @@
         li {
             display: inline-block;
 
-            a {
+            a, a:visited, a:active {
                 display: block;
                 border: 1px solid $color-mid-grey;
                 padding: 7px 13px;
                 box-shadow: 0px 0px 5px;
                 text-decoration: none;
+                color: inherit;
+            }
+
+            a:hover {
+                font-weight: bold;
+                box-shadow: 0px 0px 10px;
             }
 
             &.current {

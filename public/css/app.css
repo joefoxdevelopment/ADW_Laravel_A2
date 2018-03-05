@@ -144,13 +144,22 @@ button {
   display: inline-block;
 }
 
-.pagination-container .pagination-list li a {
+.pagination-container .pagination-list li a,
+.pagination-container .pagination-list li a:visited,
+.pagination-container .pagination-list li a:active {
   display: block;
   border: 1px solid #dfdfdf;
   padding: 7px 13px;
   -webkit-box-shadow: 0px 0px 5px;
           box-shadow: 0px 0px 5px;
   text-decoration: none;
+  color: inherit;
+}
+
+.pagination-container .pagination-list li a:hover {
+  font-weight: bold;
+  -webkit-box-shadow: 0px 0px 10px;
+          box-shadow: 0px 0px 10px;
 }
 
 .pagination-container .pagination-list li.current {
