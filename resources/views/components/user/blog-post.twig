@@ -1,0 +1,5 @@
+<div class="blog-entry">
+    <h3>{{ post.title }}</h3>
+    <span class="blog-post-date">{{ post.published_at | date('d/m/Y') }}</span>
+    <div class="blogpost-contents">{{ post.contents | raw }}</div>
+</div>

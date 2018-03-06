@@ -42,7 +42,7 @@ export default class Blogpost extends Component {
         return (
             <div className="blogpost-entry">
                 <h1>{ this.state.title }</h1>
-                <span className="publishDate">{ this.state.publishTime.toDateString() }</span>
+                <span className="blog-post-date">{ this.state.publishTime.toDateString() }</span>
                 <div className="blogpost-contents" dangerouslySetInnerHTML={{__html: this.state.content}} />
             </div>
         );

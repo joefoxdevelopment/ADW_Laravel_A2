@@ -29,7 +29,7 @@ class BlogManagementController extends Controller
         return view(
             'pages/management-console/blog/index',
             [
-                'posts' => $this->listAllBlogPosts(),
+                'posts' => BlogPost::paginate($this->paginationLimit),
             ]
         );
     }
@@ -78,10 +78,5 @@ class BlogManagementController extends Controller
         BlogPost::destroy($id);
 
         return redirect()->route('blog-management-index');
-    }
-
-    private function listAllBlogPosts()
-    {
-        return BlogPost::paginate($this->paginationLimit);
     }
 }

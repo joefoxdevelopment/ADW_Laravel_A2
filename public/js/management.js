@@ -53877,7 +53877,7 @@ var Blogpost = function (_Component) {
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'span',
-                    { className: 'publishDate' },
+                    { className: 'blog-post-date' },
                     this.state.publishTime.toDateString()
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'blogpost-contents', dangerouslySetInnerHTML: { __html: this.state.content } })

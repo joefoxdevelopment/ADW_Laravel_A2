@@ -1,0 +1,17 @@
+<div class="adjacent-posts">
+    {% if prev is defined and prev is not null %}
+        <a class="adjacent-post-link" href="{{  route('blog-post', [prev.blogpost_id, str_slug(prev.title)]) }}">
+            <div class="previous-post">
+                Previous Post: {{ prev.title }}
+            </div>
+        </a>
+    {% endif %}
+
+    {% if next is defined and not next is null %}
+        <a class="adjacent-post-link" href="{{  route('blog-post', [next.blogpost_id, str_slug(next.title)]) }}">
+            <div class="next-post">
+                Next Post: {{ next.title }}
+            </div>
+        </a>
+    {% endif %}
+</div>
