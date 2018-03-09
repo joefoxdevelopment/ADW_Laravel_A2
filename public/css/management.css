@@ -261,7 +261,7 @@ button {
           box-shadow: 0 0 5px #000000;
 }
 
-.contact-row {
+.contact-row-social {
   height: 500px;
 }
 
@@ -275,6 +275,17 @@ button {
 .twitter-container .rembeddit,
 .reddit-container .rembeddit {
   height: 480px;
+}
+
+@media (max-width: 700px) {
+  .twitter-container,
+  .reddit-container {
+    width: calc(100% - 20px);
+  }
+
+  .contact-row-social {
+    height: 1000px;
+  }
 }
 
 .blog-editor {

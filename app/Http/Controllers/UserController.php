@@ -43,6 +43,12 @@ class UserController extends Controller
     }
 
     public function contact() {
-        return view('pages/user/contact', []);
+        return view(
+            'pages/user/contact',
+            [
+                'twitter' => env('TWITTER_ACC'),
+                'reddit'  => env('REDDIT_ACC'),
+            ]
+        );
     }
 }

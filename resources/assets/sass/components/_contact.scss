@@ -4,7 +4,7 @@
     box-shadow: 0 0 5px $color-black;
 }
 
-.contact-row {
+.contact-row-social {
     height: 500px;
 }
 
@@ -15,5 +15,15 @@
 
     .rembeddit {
         height: 480px;
+    }
+}
+
+@media (max-width: 700px) {
+    .twitter-container, .reddit-container {
+        width: calc(100% - 20px);
+    }
+
+    .contact-row-social {
+        height: 1000px;
     }
 }
