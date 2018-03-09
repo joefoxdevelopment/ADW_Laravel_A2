@@ -6,7 +6,7 @@
 .blog-entry {
     width: calc(100% - 20px);
     padding: 10px;
-    box-shadow: 0 0 5px;
+    box-shadow: 0 0 5px $color-black;
     text-decoration: none;
 
     h3 {
@@ -24,9 +24,9 @@
 }
 
 .blog-list-container {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
-    box-shadow: 0 0 5px;
+    box-shadow: 0 0 5px $color-black;
 
     h2 {
         margin: 0 0 10px;

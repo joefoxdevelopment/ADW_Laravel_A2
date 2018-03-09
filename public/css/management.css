@@ -24,8 +24,8 @@
 .blog-entry {
   width: calc(100% - 20px);
   padding: 10px;
-  -webkit-box-shadow: 0 0 5px;
-          box-shadow: 0 0 5px;
+  -webkit-box-shadow: 0 0 5px #000000;
+          box-shadow: 0 0 5px #000000;
   text-decoration: none;
 }
 
@@ -46,10 +46,10 @@
 }
 
 .blog-list-container {
-  width: 100%;
+  width: calc(100% - 20px);
   padding: 10px;
-  -webkit-box-shadow: 0 0 5px;
-          box-shadow: 0 0 5px;
+  -webkit-box-shadow: 0 0 5px #000000;
+          box-shadow: 0 0 5px #000000;
 }
 
 .blog-list-container h2 {
