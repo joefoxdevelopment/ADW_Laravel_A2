@@ -1,0 +1,19 @@
+.contact-wrapper {
+    width: calc(100% - 20px);
+    padding: 10px;
+    box-shadow: 0 0 5px $color-black;
+}
+
+.contact-row {
+    height: 500px;
+}
+
+.twitter-container, .reddit-container {
+    width: calc(50% - 20px);
+    padding: 10px;
+    float: left;
+
+    .rembeddit {
+        height: 480px;
+    }
+}

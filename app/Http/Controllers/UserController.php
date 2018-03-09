@@ -43,6 +43,6 @@ class UserController extends Controller
     }
 
     public function contact() {
-        return view('pages/user/index', []);
+        return view('pages/user/contact', []);
     }
 }

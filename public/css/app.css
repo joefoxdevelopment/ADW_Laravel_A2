@@ -254,3 +254,26 @@ button {
   color: #4040ee !important;
 }
 
+.contact-wrapper {
+  width: calc(100% - 20px);
+  padding: 10px;
+  -webkit-box-shadow: 0 0 5px #000000;
+          box-shadow: 0 0 5px #000000;
+}
+
+.contact-row {
+  height: 500px;
+}
+
+.twitter-container,
+.reddit-container {
+  width: calc(50% - 20px);
+  padding: 10px;
+  float: left;
+}
+
+.twitter-container .rembeddit,
+.reddit-container .rembeddit {
+  height: 480px;
+}
+
