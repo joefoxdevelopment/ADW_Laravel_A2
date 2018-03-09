@@ -54,19 +54,21 @@ class UserController extends Controller
     }
 
     public function sendMessage(SendMessage $request) {
-        $client = new FbBotApp(Config::get('social.facebook.message.token'));
+        $data = [
+            'content' => sprintf(
+                "***Email:*** %s\n%s",
+                $request->email,
+                $request->content
+            ),
+            'username' => 'Joe Fox Development PHP Bot',
+        ];
 
-        $message = new Message(
-            Config::get('social.facebook.message.profile'),
-            sprintf("Email: %s\n%s", $request->email, $request->contents)
-        );
-
-        $client->send($message);
+        $curl = curl_init(Config::get('social.discord.webhook.url'));
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_exec($curl);
 
         return redirect()->route('contact');
-    }
-
-    public function privacyPolicy() {
-        return view('pages/user/index', []);
     }
 }
