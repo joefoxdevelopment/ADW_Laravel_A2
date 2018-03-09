@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\BlogPost;
 use App\Http\Requests\SendMessage;
 use Illuminate\Support\Facades\Config;
-use pimax\FbBotApp;
-use pimax\Messages\Message;
 
 class UserController extends Controller
 {
