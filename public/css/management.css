@@ -261,6 +261,26 @@ button {
           box-shadow: 0 0 5px #000000;
 }
 
+.contact-row-form {
+  width: 100%;
+  padding: 10px;
+}
+
+.contact-row-form .form-row {
+  display: grid;
+  width: calc(100% - 20px);
+  grid-template-columns: 25% 75%;
+}
+
+.contact-row-form .form-row textarea {
+  resize: none;
+  height: 180px;
+}
+
+.contact-row-form .contact-submit {
+  width: calc(100% - 20px);
+}
+
 .contact-row-social {
   height: 500px;
 }
