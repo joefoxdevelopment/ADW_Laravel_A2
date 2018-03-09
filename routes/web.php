@@ -16,6 +16,7 @@ Route::get('/about', 'UserController@about')->name('about');
 Route::get('/blog', 'UserController@blog')->name('blog');
 Route::get('/blog/{id}/{slug?}', 'UserController@blogPost')->name('blog-post');
 Route::get('/contact', 'UserController@contact')->name('contact');
+Route::get('/privacypolicy', 'UserController@privacyPolicy')->name('privacy-policy');
 Route::get('/projects', 'UserController@projects')->name('projects');
 
 Route::post('/contact', 'UserController@sendMessage')->name('message');

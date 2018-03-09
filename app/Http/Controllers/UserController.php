@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\BlogPost;
 use App\Http\Requests\SendMessage;
+use Illuminate\Support\Facades\Config;
+use pimax\FbBotApp;
+use pimax\Messages\Message;
 
 class UserController extends Controller
 {
@@ -46,15 +49,26 @@ class UserController extends Controller
         return view(
             'pages/user/contact',
             [
-                'twitter' => env('TWITTER_ACC'),
-                'reddit'  => env('REDDIT_ACC'),
+                'twitter' => Config::get('social.twitter'),
+                'reddit'  => Config::get('social.reddit'),
             ]
         );
     }
 
     public function sendMessage(SendMessage $request) {
-        //Send messenger message here
+        $client = new FbBotApp(Config::get('social.facebook.message.token'));
+
+        $message = new Message(
+            Config::get('social.facebook.message.profile'),
+            sprintf("Email: %s\n%s", $request->email, $request->contents)
+        );
+
+        $client->send($message);
 
         return redirect()->route('contact');
+    }
+
+    public function privacyPolicy() {
+        return view('pages/user/index', []);
     }
 }
