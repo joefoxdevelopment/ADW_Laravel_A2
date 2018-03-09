@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\BlogPost;
-use Illuminate\Http\Request;
+use App\Http\Requests\SendMessage;
 
 class UserController extends Controller
 {
@@ -50,5 +50,11 @@ class UserController extends Controller
                 'reddit'  => env('REDDIT_ACC'),
             ]
         );
+    }
+
+    public function sendMessage(SendMessage $request) {
+        //Send messenger message here
+
+        return redirect()->route('contact');
     }
 }

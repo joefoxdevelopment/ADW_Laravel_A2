@@ -18,6 +18,8 @@ Route::get('/blog/{id}/{slug?}', 'UserController@blogPost')->name('blog-post');
 Route::get('/contact', 'UserController@contact')->name('contact');
 Route::get('/projects', 'UserController@projects')->name('projects');
 
+Route::post('/contact', 'UserController@sendMessage')->name('message');
+
 Auth::routes();
 
 Route::get('/manage', 'ManagementConsoleController@index')->name('management-index');
