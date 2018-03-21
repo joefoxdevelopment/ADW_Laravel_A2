@@ -53638,12 +53638,19 @@ module.exports = ReactDOMInvalidARIAHook;
 /* 216 */
 /***/ (function(module, exports) {
 
-document.querySelector('.js-nav-hamburger').onclick = function (e) {
+var icon = document.querySelector('.js-nav-hamburger');
+icon.onclick = function (e) {
     var menu = document.querySelector('.js-mobile-menu');
     if (menu.classList.contains('show')) {
         menu.classList.remove('show');
     } else {
         menu.classList.add('show');
+    }
+
+    if (icon.classList.contains('show')) {
+        icon.classList.remove('show');
+    } else {
+        icon.classList.add('show');
     }
 };
 
@@ -53748,6 +53755,15 @@ var ManagementNav = function (_Component) {
                             { className: 'nav__links__link' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'a',
+                                { href: '/manage/project' },
+                                'Project Management'
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'li',
+                            { className: 'nav__links__link' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'a',
                                 { href: '/logout' },
                                 'Logout'
                             )
@@ -53765,7 +53781,7 @@ var ManagementNav = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'span',
                         { className: 'js-nav-hamburger nav__hamburger' },
-                        'Nav Icon Here'
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/images/svg/nav-open.svg' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -53774,6 +53790,11 @@ var ManagementNav = function (_Component) {
                             'a',
                             { className: 'js-nav-link', href: '/manage/blog' },
                             'Blog Management'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'a',
+                            { className: 'js-nav-link', href: '/manage/project' },
+                            'Project Management'
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'a',

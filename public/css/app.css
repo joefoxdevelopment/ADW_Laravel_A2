@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);@media (max-width: 700px) {
+@import url(https://fonts.googleapis.com/css?family=Roboto);@media (max-width: 700px) {
   .content {
     width: 100%;
   }
@@ -13,7 +13,7 @@
 }
 
 * {
-  font-family: Raleway, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .blog-post-date {
@@ -134,8 +134,8 @@ button {
   background-color: #efefef;
   -webkit-box-shadow: 0px 0px 5px;
           box-shadow: 0px 0px 5px;
-  -webkit-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  -webkit-transition: 300ms ease all;
+  transition: 300ms ease all;
 }
 
 .nav__mobile__links.show {
@@ -175,6 +175,14 @@ button {
 
 .nav__hamburger {
   float: right;
+  height: 50px;
+  -webkit-transition: 300ms ease all;
+  transition: 300ms ease all;
+}
+
+.nav__hamburger.show {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .nav__links {

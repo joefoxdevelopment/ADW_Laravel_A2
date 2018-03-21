@@ -19,7 +19,7 @@
             width: 100%;
             background-color: $color-light-grey;
             box-shadow: 0px 0px 5px;
-            transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+            transition: 300ms ease all;
 
             &.show {
                 display: inline-block;
@@ -60,6 +60,12 @@
 
     &__hamburger {
         float: right;
+        height: 50px;
+        transition: 300ms ease all;
+
+        &.show {
+            transform: rotate(-90deg);
+        }
     }
 
     &__links {

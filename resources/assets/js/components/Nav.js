@@ -16,7 +16,7 @@ export default class Nav extends Component {
                 </div>
                 <div className="nav__mobile">
                     <a className="nav__title" href="/">Joe Fox Development</a>
-                    <span className="js-nav-hamburger nav__hamburger">Nav Icon Here</span>
+                    <span className="js-nav-hamburger nav__hamburger"><img src="/images/svg/nav-open.svg" /></span>
                     <div className="js-mobile-menu nav__mobile__links">
                         <a className="js-nav-link" href="/about">About</a>
                         <a className="js-nav-link" href="/projects">Projects</a>
