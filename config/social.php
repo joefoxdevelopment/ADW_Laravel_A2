@@ -6,7 +6,8 @@ return [
 
     'discord' => [
         'webhook' => [
-            'url' => env('DISCORD_WEBHOOK_URL'),
+            'url'      => env('DISCORD_WEBHOOK_URL'),
+            'bot_name' => env('DISCORD_BOT_NAME'),
         ],
     ],
 ];

@@ -60,7 +60,7 @@ class UserController extends Controller
                 $request->email,
                 $request->content
             ),
-            'username' => 'Joe Fox Development PHP Bot',
+            'username' => Config::get('social.discord.webhook.bot_name'),
         ];
 
         $curl = curl_init(Config::get('social.discord.webhook.url'));
