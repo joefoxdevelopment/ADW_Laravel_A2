@@ -47,14 +47,14 @@
 
 .adjacent-post-link {
     text-decoration: none;
-    display: block;
     line-height: 50px;
-    padding: 5px;
+    width: 50%;
 }
 
 .next-post, .previous-post {
     text-decoration: none;
-    width: calc(50% - 5px);
+    width: calc(50% - 15px);
+    padding: 5px;
     box-shadow: 0 0 5px;
 
 }

@@ -33,7 +33,7 @@ class UserController extends Controller
             'pages/user/blogpost',
             [
                 'post' => $post,
-                'prev' => BlogPost::where('blogpost_id', '<', $post->blogpost_id)->first(),
+                'prev' => BlogPost::where('blogpost_id', '<', $post->blogpost_id)->orderby('blogpost_id', 'desc')->first(),
                 'next' => BlogPost::where('blogpost_id', '>', $post->blogpost_id)->first(),
             ]
         );
