@@ -13,6 +13,7 @@ require('./bootstrap');
 require('./components/Footer');
 require('./components/ManagementNav');
 require('./components/Blogpost');
+require('./components/Project');
 
 /**
  * Other JavaScript

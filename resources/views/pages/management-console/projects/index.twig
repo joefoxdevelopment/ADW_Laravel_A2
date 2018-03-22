@@ -1,0 +1,13 @@
+{% extends "components/management-console/base" %}
+
+{% block content %}
+    <div class="manage-list-container">
+        <a class="new-project-button" href="{{ route('new-project') }}">Add a New Project</a>
+        <hr>
+        {% if projects is defined and not projects is empty %}
+            {% include "components/management-console/project-list" %}
+        {% else %}
+            <h5>There are no projects to display</h5>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{{ posts.links('components/common/pagination') | raw }}
+{% for project in projects %}
+    {% if loop.first %}
+        <div class="post-management-list">
+    {% endif %}
+    <div class="post-management-row">
+        <ul class="post-row-list">
+            <li class="row-list-title"><a>{{ project.title }}</a></li>
+            <li><a href="{{ route('edit-project', [project.project_id]) }}">Edit</a></li>
+            <li><a href="{{ route('delete-project', [project.project_id]) }}">Delete</a></li>
+        </ul>
+    </div>
+    {% if loop.last %}
+        </div>
+    {% endif %}
+{% endfor %}
+{{ posts.links('components/common/pagination') | raw }}

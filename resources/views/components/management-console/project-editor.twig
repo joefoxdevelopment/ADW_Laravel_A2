@@ -1,0 +1,50 @@
+{% if errors.any() %}
+    <div class="errors">
+        <p>Errors:</p>
+        <ul>
+            {% for error in errors.all() %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+{% if not project is defined %}
+    {% set project = { 'title': '', 'contents': '', 'link': ''} %}
+{% endif %}
+<form method="POST" id="blog-form">
+    {{ csrf_field() }}
+    <div class="blog-editor">
+        <div class="manage-blog-item blog-fullwide">
+            <h2>Add a new project</h2>
+        </div>
+        <div class="manage-blog-item">
+            <label for="title">Title: </label>
+        </div>
+        <div class="manage-blog-item">
+            <input id="blog-title" type="text" name="title" value="{{ project.title }}">
+        </div>
+
+        <div class="manage-blog-item">
+            <label for="content">Description: </label>
+        </div>
+        <div class="manage-blog-item">
+            <textarea id="blog-content" name="content" form="blog-form">{{ project.contents }}</textarea>
+        </div>
+
+        <div class="manage-blog-item blog-fullwide">
+            {# Blog posts and previews are react components #}
+            <div id="project" class="preview"></div>
+        </div>
+
+        <div class="manage-blog-item">
+            <label for="title">Link: </label>
+        </div>
+        <div class="manage-blog-item">
+            <input id="blog-title" type="text" name="link" value="{{ project.link }}">
+        </div>
+
+        <div class="manage-blog-item blog-fullwide">
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+</form>
