@@ -16,7 +16,7 @@ class UserController extends Controller
 	}
 
     public function about() {
-        return view('pages/user/index', []);
+        return view('pages/user/about', []);
     }
 
     public function blog() {
