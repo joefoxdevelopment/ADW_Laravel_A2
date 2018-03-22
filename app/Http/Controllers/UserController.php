@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\BlogPost;
+use App\Project;
 use App\Http\Requests\SendMessage;
 use Illuminate\Support\Facades\Config;
 
@@ -40,7 +41,12 @@ class UserController extends Controller
     }
 
     public function projects() {
-        return view('pages/user/index', []);
+        return view(
+            'pages/user/projects',
+            [
+                'projects' => Project::paginate($this->paginationLimit),
+            ]
+        );
     }
 
     public function contact() {

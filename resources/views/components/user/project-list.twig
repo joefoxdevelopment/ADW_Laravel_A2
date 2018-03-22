@@ -1,0 +1,17 @@
+<div class="blog-list-container">
+    <h2>Projects</h2>
+    {% for project in projects %}
+        {% if loop.first %}
+            <div class="blog-list-entry">
+        {% endif %}
+            {% include "components/user/project" %}
+        {% if loop.last %}
+            </div>
+        {% else %}
+            <hr>
+        {% endif %}
+    {% else %}
+        <h5>There are no projects to to display at the moment. Please check back again soon</h5>
+    {% endfor %}
+    {{ posts.links('components/common/pagination') | raw }}
+</div>
