@@ -1,6 +1,12 @@
 {% extends "components/user/base" %}
 
 {% block content %}
-    {# include the latest blog post full body width #}
-    {# two random projects #}
+    <div class="index-container">
+        <div class="about-container">
+            <p>I'm Joe Fox, and this is my website. I am a computer science student at the university of Huddersfield, aiming to graduate in 2018.</p>
+            <p>This site is both my blog and portfolio.</p>
+        </div>
+        {% include "components/user/project"  %}
+        {% include "components/user/blog-post" %}
+    </div>
 {% endblock %}

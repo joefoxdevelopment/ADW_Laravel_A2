@@ -8,7 +8,6 @@ export default class Nav extends Component {
                 <div className="nav__desktop">
                     <a className="nav__title" href="/">Joe Fox Development</a>
                     <ul className="nav__links">
-                        <li className="nav__links__link"><a href="/about">About</a></li>
                         <li className="nav__links__link"><a href="/projects">Projects</a></li>
                         <li className="nav__links__link"><a href="/blog">Blog</a></li>
                         <li className="nav__links__link"><a href="/contact">Contact</a></li>
@@ -18,7 +17,6 @@ export default class Nav extends Component {
                     <a className="nav__title" href="/">Joe Fox Development</a>
                     <span className="js-nav-hamburger nav__hamburger"><img src="/images/svg/nav-open.svg" /></span>
                     <div className="js-mobile-menu nav__mobile__links">
-                        <a className="js-nav-link" href="/about">About</a>
                         <a className="js-nav-link" href="/projects">Projects</a>
                         <a className="js-nav-link" href="/blog">Blog</a>
                         <a className="js-nav-link" href="/contact">Contact</a>

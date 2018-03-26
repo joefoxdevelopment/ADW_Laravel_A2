@@ -12,12 +12,11 @@ class UserController extends Controller
     var $paginationLimit = 10;
 
 	public function index() {
-		return view('pages/user/index', []);
+		return view('pages/user/index', [
+            'project' => $this->getRandomProject(),
+            'post' => $this->getRecentBlogPost(),
+        ]);
 	}
-
-    public function about() {
-        return view('pages/user/about', []);
-    }
 
     public function blog() {
         return view(
@@ -76,5 +75,13 @@ class UserController extends Controller
         curl_exec($curl);
 
         return redirect()->route('contact');
+    }
+
+    private function getRecentBlogPost() {
+        return BlogPost::latest()->first();
+    }
+
+    private function getRandomProject() {
+        return Project::inRandomOrder()->first();
     }
 }
