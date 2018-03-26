@@ -6,7 +6,13 @@
             <p>I'm Joe Fox, and this is my website. I am a computer science student at the university of Huddersfield, aiming to graduate in 2018.</p>
             <p>This site is both my blog and portfolio.</p>
         </div>
-        {% include "components/user/project"  %}
-        {% include "components/user/blog-post" %}
+        <div>
+            <h2>Latest blog post</h2>
+            {% include "components/user/blog-post" %}
+        </div>
+        <div>
+            <h2>Projects include</h2>
+            {% include "components/user/project"  %}
+        </div>
     </div>
 {% endblock %}
