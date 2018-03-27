@@ -53756,7 +53756,7 @@ var ManagementNav = function (_Component) {
                             { className: 'nav__links__link' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'a',
-                                { href: '/manage/project' },
+                                { href: '/manage/projects' },
                                 'Project Management'
                             )
                         ),
@@ -53794,7 +53794,7 @@ var ManagementNav = function (_Component) {
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'a',
-                            { className: 'js-nav-link', href: '/manage/project' },
+                            { className: 'js-nav-link', href: '/manage/projects' },
                             'Project Management'
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

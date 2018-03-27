@@ -6,13 +6,19 @@
             <p>I'm Joe Fox, and this is my website. I am a computer science student at the university of Huddersfield, aiming to graduate in 2018.</p>
             <p>This site is both my blog and portfolio.</p>
         </div>
-        <div>
-            <h2>Latest blog post</h2>
-            {% include "components/user/blog-post" %}
-        </div>
-        <div>
-            <h2>Projects include</h2>
-            {% include "components/user/project"  %}
-        </div>
+        {% if post is defined and not post is empty %}
+            <div>
+                <h2>Latest blog post</h2>
+                <a class="blog-entry-link" href="{{ route('blog-post', [post.blogpost_id, str_slug(post.title)]) }}">
+                    {% include "components/user/blog-post" %}
+                </a>
+            </div>
+        {% endif %}
+        {% if project is defined and not project is empty %}
+            <div>
+                <h2>Projects include</h2>
+                {% include "components/user/project"  %}
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
