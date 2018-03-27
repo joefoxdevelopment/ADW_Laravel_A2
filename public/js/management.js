@@ -53736,7 +53736,7 @@ var ManagementNav = function (_Component) {
                     { className: 'nav__desktop' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
-                        { className: 'nav__title', href: '/' },
+                        { className: 'nav__title', href: '/manage' },
                         'Joe Fox Development - Management Console'
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -53776,7 +53776,7 @@ var ManagementNav = function (_Component) {
                     { className: 'nav__mobile' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'a',
-                        { className: 'nav__title', href: '/' },
+                        { className: 'nav__title', href: '/manage' },
                         'Joe Fox Development - Management Console'
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

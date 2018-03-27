@@ -1,8 +1,9 @@
 <?php
 
 return [
-    'twitter' => env('TWITTER_ACC'),
-    'reddit' => env('REDDIT_ACC'),
+    'linkedin' => env('LINKEDIN_ACC'),
+    'reddit'   => env('REDDIT_ACC'),
+    'twitter'  => env('TWITTER_ACC'),
 
     'discord' => [
         'webhook' => [

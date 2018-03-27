@@ -26,6 +26,10 @@
 
 .contact-row-social {
     height: 500px;
+
+    &-small {
+        text-align: center;
+    }
 }
 
 .twitter-container, .reddit-container {

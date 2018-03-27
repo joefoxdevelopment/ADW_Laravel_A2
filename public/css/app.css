@@ -293,6 +293,10 @@ button {
   height: 500px;
 }
 
+.contact-row-social-small {
+  text-align: center;
+}
+
 .twitter-container,
 .reddit-container {
   width: calc(50% - 20px);

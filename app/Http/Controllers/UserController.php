@@ -14,7 +14,7 @@ class UserController extends Controller
 	public function index() {
 		return view('pages/user/index', [
             'project' => $this->getRandomProject(),
-            'post' => $this->getRecentBlogPost(),
+            'post'    => $this->getRecentBlogPost(),
         ]);
 	}
 
@@ -52,8 +52,9 @@ class UserController extends Controller
         return view(
             'pages/user/contact',
             [
-                'twitter' => Config::get('social.twitter'),
-                'reddit'  => Config::get('social.reddit'),
+                'linkedin' => Config::get('social.linkedin'),
+                'reddit'   => Config::get('social.reddit'),
+                'twitter'  => Config::get('social.twitter'),
             ]
         );
     }
