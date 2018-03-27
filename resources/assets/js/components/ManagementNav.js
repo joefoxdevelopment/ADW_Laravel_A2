@@ -6,7 +6,7 @@ export default class ManagementNav extends Component {
         return (
             <div className="nav__container">
                 <div className="nav__desktop">
-                    <a className="nav__title" href="/">Joe Fox Development - Management Console</a>
+                    <a className="nav__title" href="/manage">Joe Fox Development - Management Console</a>
                     <ul className="nav__links">
                         <li className="nav__links__link"><a href="/manage/blog">Blog Management</a></li>
                         <li className="nav__links__link"><a href="/manage/project">Project Management</a></li>
@@ -14,7 +14,7 @@ export default class ManagementNav extends Component {
                     </ul>
                 </div>
                 <div className="nav__mobile">
-                    <a className="nav__title" href="/">Joe Fox Development - Management Console</a>
+                    <a className="nav__title" href="/manage">Joe Fox Development - Management Console</a>
                     <span className="js-nav-hamburger nav__hamburger"><img src="/images/svg/nav-open.svg" /></span>
                     <div className="js-mobile-menu nav__mobile__links">
                         <a className="js-nav-link" href="/manage/blog">Blog Management</a>
