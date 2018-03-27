@@ -16,6 +16,12 @@
   font-family: Roboto, sans-serif;
 }
 
+.index-container {
+  padding: 10px;
+  -webkit-box-shadow: 0 0 5px;
+          box-shadow: 0 0 5px;
+}
+
 .blog-post-date {
   font-weight: lighter;
   font-size: small;
