@@ -1,4 +1,4 @@
-{{ posts.links('components/common/pagination') | raw }}
+{{ projects.links('components/common/pagination') | raw }}
 {% for project in projects %}
     {% if loop.first %}
         <div class="post-management-list">
@@ -14,4 +14,4 @@
         </div>
     {% endif %}
 {% endfor %}
-{{ posts.links('components/common/pagination') | raw }}
+{{ projects.links('components/common/pagination') | raw }}
