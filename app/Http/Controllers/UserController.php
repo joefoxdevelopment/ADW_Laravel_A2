@@ -52,6 +52,7 @@ class UserController extends Controller
         return view(
             'pages/user/contact',
             [
+                'github'   => Config::get('social.github'),
                 'linkedin' => Config::get('social.linkedin'),
                 'reddit'   => Config::get('social.reddit'),
                 'twitter'  => Config::get('social.twitter'),
