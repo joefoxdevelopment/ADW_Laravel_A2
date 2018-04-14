@@ -16,10 +16,11 @@
 
 .blog-entry-link {
     text-decoration: none;
+    color: $color-black;
 
     &:visited, &:active, &:hover, &:visited {
         text-decoration: none;
-        color: inherit;
+        color: $color-black;
     }
 }
 
