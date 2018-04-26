@@ -34,11 +34,11 @@ Route::get('/manage/projects/delete/{id}', 'ProjectManagementController@deletePr
 Route::get('/manage/projects/edit/{id}', 'ProjectManagementController@editProject')->name('edit-project');
 Route::get('/manage/projects/new', 'ProjectManagementController@newProject')->name('new-project');
 
-Route::post('/manage/blog/edit/{id}', 'BlogManagementController@updateBlogPost')->name('edit-blog-post');
+Route::post('/manage/blog/edit/{id}', 'BlogManagementController@updateBlogPost')->name('edit-blog-post-submit');
 Route::post('/manage/blog/new', 'BlogManagementController@addNewBlogPost')->name('add-new-blog-post');
 
-Route::post('/manage/projects/edit/{id}', 'ProjectManagementController@updateProject')->name('edit-blog-post');
-Route::post('/manage/projects/new', 'ProjectManagementController@addNewProject')->name('add-new-blog-post');
+Route::post('/manage/projects/edit/{id}', 'ProjectManagementController@updateProject')->name('edit-project-submit');
+Route::post('/manage/projects/new', 'ProjectManagementController@addNewProject')->name('add-new-project');
 
 Route::middleware(['auth'])->group(function() {
 	Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
